@@ -17,7 +17,7 @@ Java Basic concepts
   * initialization
     * Optional.of(); 
     * Optional.empty();
-    * Optional.ofNullable("Optional value");
+    * Optional.ofNullable();
   * Checking
     * input1.isPresent()
     * input2.isEmpty()
