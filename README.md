@@ -1,2 +1,2 @@
-# LearningJava
+#Java
 Java Basic concepts
