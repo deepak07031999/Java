@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- Definition of the Class element -->
+
+    <!--     Definition of the requiredAge type (between 18 and 30)-->
+    <simpleType name = "AgeSimpleType">
+        <restriction base="int">
+            <minInclusive value="18"/>
+            <maxInclusive value="30"/>
+        </restriction>
+    </simpleType>
+
+    <element name="Class">
+        <complexType>
+            <sequence>
+                <!-- Definition of the Student element (repeated with maxOccurs="unbounded") -->
+                <element name="Student" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <!-- name element for the Student -->
+                            <element name="name" type="string"/>
+                            <!-- age element for the Student, using the requiredAge type -->
+                            <element name="age" >
+                                <simpleType>
+                                    <restriction base="int">
+                                        <minInclusive value="18"/>
+                                        <maxInclusive value="30"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                        </sequence>
+                        <!-- id attribute for the Student, of type ID -->
+                        <attribute name="id" type="ID" use="required"/>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

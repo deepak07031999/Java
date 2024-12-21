@@ -2,6 +2,7 @@ package org.example.stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static java.lang.Math.min;
 
@@ -80,7 +81,8 @@ public class IntermediateOperations {
     private static void distinctOperation() {
         System.out.println("distinctOperation");
         List<String> list = List.of("a", "b", "a");
-        list.stream()
+        Stream<String> distinctOperationStream = list.stream();
+        distinctOperationStream
                 .distinct()
                 .forEach(System.out::println);
     }

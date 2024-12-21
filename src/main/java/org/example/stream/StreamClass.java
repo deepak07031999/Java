@@ -2,7 +2,7 @@ package org.example.stream;
 
 public class StreamClass {
     public static void main(String[] args) {
-//        IntermediateOperations.performIntermediateOperations();
+        IntermediateOperations.performIntermediateOperations();
         TerminalOperations.performTerminalOperations();
     }
 
