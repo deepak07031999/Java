@@ -80,5 +80,6 @@ Java Basic concepts
     * Appenders
       * Console Appender
       * File Appender
+    * slf4j
 * utilities
   * Base64 Encoding
