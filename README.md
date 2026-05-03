@@ -66,8 +66,21 @@ Java Basic concepts
     * setPriority
   * sleep(10): To pause thread, function argument are in milli seconds
   * Thread.join(): this use to pause the execution of the current thread until the thread on which it is called completes.
+  * Daemon thread: runs in background and does not stop JVM from exiting when all user threads complete.
+    * setDaemon(true) must be called before start()
+  * Thread.getAllStackTraces(): returns a map of all live threads with their stack traces.
   * synchronized keyword is used to handle thread synchronization by controlling access to shared resources
+  * CountDownLatch: makes one thread wait until other ExecutorService tasks call countDown(); use await(timeout) to avoid waiting forever.
+  * CyclicBarrier: makes multiple threads wait at a common point; barrier opens when all threads call await().
   * Thread states - New, Runnable, Running, Waiting, Dead
+  * Executor
+    * newSingleThreadExecutor(): executes submitted tasks one by one using a single worker thread.
+    * newFixedThreadPool(3): executes submitted tasks using a fixed number of worker threads.
+    * newScheduledThreadPool(1): creates a scheduled executor that can run tasks after a delay or repeatedly.
+    * scheduleWithFixedDelay(new Task(0), 2, 1, TimeUnit.SECONDS): starts after 2 seconds, then waits 1 second after each task completion before running again.
+    * Callable: similar to Runnable, but it can return a value and throw checked exceptions.
+    * submit(new CallableTask(1)): submits a Callable task to ExecutorService and returns a Future.
+    * Future.get(): waits for the Callable task to complete and returns its result.
 * XML
   * DTD
   * XSD
