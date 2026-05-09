@@ -5,11 +5,11 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-class BarrierWorker implements Runnable {
+public class BarrierWorker implements Runnable {
     private final int workerId;
     private final CyclicBarrier barrier;
 
-    BarrierWorker(int workerId, CyclicBarrier barrier) {
+    public BarrierWorker(int workerId, CyclicBarrier barrier) {
         this.workerId = workerId;
         this.barrier = barrier;
     }

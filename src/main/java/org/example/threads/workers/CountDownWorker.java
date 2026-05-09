@@ -3,12 +3,12 @@ package org.example.threads.workers;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-class CountDownWorker implements Runnable {
+public class CountDownWorker implements Runnable {
     private final int workerId;
     private final CountDownLatch latch;
     private final List<String> failures;
 
-    CountDownWorker(int workerId, CountDownLatch latch, List<String> failures) {
+    public CountDownWorker(int workerId, CountDownLatch latch, List<String> failures) {
         this.workerId = workerId;
         this.latch = latch;
         this.failures = failures;

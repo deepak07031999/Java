@@ -1,9 +1,9 @@
 package org.example.threads.workers;
 
-class Task implements Runnable {
+public class Task implements Runnable {
     private final int id;
 
-    Task(int id) {
+    public Task(int id) {
         this.id = id;
     }
 

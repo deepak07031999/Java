@@ -72,6 +72,7 @@ Java Basic concepts
   * synchronized keyword is used to handle thread synchronization by controlling access to shared resources
   * CountDownLatch: makes one thread wait until other ExecutorService tasks call countDown(); use await(timeout) to avoid waiting forever.
   * CyclicBarrier: makes multiple threads wait at a common point; barrier opens when all threads call await().
+  * Exchanger: lets two threads meet and swap data with each other using exchange().
   * Thread states - New, Runnable, Running, Waiting, Dead
   * Executor
     * newSingleThreadExecutor(): executes submitted tasks one by one using a single worker thread.
